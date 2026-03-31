@@ -8,7 +8,7 @@ Search 81,000+ planning applications by address, postcode, parish, case officer,
 
 ```bash
 pip install requests
-git clone https://github.com/matthewkeen/iom-planning-query.git
+git clone https://github.com/isle-of-man-planning/iom-planning-query.git
 cd iom-planning-query
 ```
 
@@ -25,13 +25,13 @@ python query.py --parish "Malew"
 # Search by application type
 python query.py --type "extension"
 
-# Get details for a specific application
+# Get a specific application
 python query.py --ref "24/00182/B"
 
 # Filter by outcome
 python query.py --parish "Douglas" --outcome "approved"
 
-# Export results to CSV
+# Export to CSV
 python query.py --parish "Rushen" --output results.csv
 ```
 
@@ -48,12 +48,11 @@ This tool uses the public [PlanningPortal.im](https://planningportal.im) API. Vi
 - Applications from the 1990s to present
 - Decision notices, conditions, supporting documents
 
-## Examples
+## Example
 
 ```python
 import requests
 
-# Search applications in a parish
 resp = requests.get("https://api.planningportal.im/applications", params={
     "parish": "Malew",
     "limit": 10
@@ -64,11 +63,7 @@ applications = resp.json()
 ## Related
 
 - [PlanningPortal.im](https://planningportal.im) — Full web interface
-- [IOM Planning Statistics](https://github.com/matthewkeen/iom-planning-stats) — Data analysis and articles
-
-## Contributing
-
-Issues and pull requests welcome. Planning data is public record — better tools benefit everyone on the island.
+- [IOM Planning Statistics](https://github.com/isle-of-man-planning/iom-planning-stats) — Data analysis and articles
 
 ## Licence
 
