@@ -39,7 +39,7 @@ python query.py --parish "Rushen" --output results.csv
 
 This tool uses the public [PlanningPortal.im](https://planningportal.im) API. Visit the site directly to search via the web interface, browse by map, or explore officer profiles and parish statistics.
 
-**API base URL:** `https://api.planningportal.im`
+
 
 ## Data Coverage
 
@@ -48,17 +48,7 @@ This tool uses the public [PlanningPortal.im](https://planningportal.im) API. Vi
 - Applications from the 1990s to present
 - Decision notices, conditions, supporting documents
 
-## Example
 
-```python
-import requests
-
-resp = requests.get("https://api.planningportal.im/applications", params={
-    "parish": "Malew",
-    "limit": 10
-})
-applications = resp.json()
-```
 
 ## Related
 
